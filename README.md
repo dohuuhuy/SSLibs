@@ -15,12 +15,12 @@ npm install --save calendar-lunar
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'calendar-lunar'
+import MyComponentTest from 'calendar-lunar'
 import 'calendar-lunar/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponentTest />
   }
 }
 ```
