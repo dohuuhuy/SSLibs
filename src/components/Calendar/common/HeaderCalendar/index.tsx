@@ -26,7 +26,7 @@ const HeaderCalendar = ({
       <div>
         <p className={styles.txtDate}>Tháng {date.format('MM - YYYY')} </p>
       </div>
-      <div className={styles.groupBtn} hidden>
+      <div className={styles.groupBtn}>
         <div>
           <button onClick={handlePrev}>
             <i className='bi bi-chevron-left' />
