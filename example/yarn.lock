@@ -91,25 +91,26 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/node@file:../node_modules/@types/node":
-  version "12.20.55"
+"@types/node@link:../node_modules/@types/node":
+  version "0.0.0"
+  uid ""
 
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
-"@types/react-dom@file:../node_modules/@types/react-dom":
-  version "18.0.9"
-  dependencies:
-    "@types/react" "*"
+"@types/react-dom@link:../node_modules/@types/react-dom":
+  version "0.0.0"
+  uid ""
 
-"@types/react@*", "@types/react@file:../node_modules/@types/react":
-  version "18.0.26"
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
+"@types/react@*":
+  version "0.0.0"
+  uid ""
+
+"@types/react@link:../node_modules/@types/react":
+  version "0.0.0"
+  uid ""
 
 "@types/scheduler@*":
   version "0.16.2"
@@ -121,13 +122,13 @@ bootstrap-icons@1.10.2:
   resolved "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.10.2.tgz#6a5729e0475e007ed82d752225645e4e6fec48d7"
   integrity sha512-PTPYadRn1AMGr+QTSxe4ZCc+Wzv9DGZxbi3lNse/dajqV31n2/wl/7NX78ZpkvFgRNmH4ogdIQPQmxAfhEV6nA==
 
-"calendar-lunar@file:..":
-  version "1.1.0"
-  dependencies:
-    bootstrap-icons "1.10.2"
-    lodash "4.17.21"
-    moment "2.29.4"
-    next "^12"
+"bootstrap-icons@link:../node_modules/bootstrap-icons":
+  version "0.0.0"
+  uid ""
+
+"calendar-lunar@link:..":
+  version "0.0.0"
+  uid ""
 
 caniuse-lite@^1.0.30001406:
   version "1.0.30001439"
@@ -204,16 +205,13 @@ postcss@8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-"react-dom@file:../node_modules/react-dom":
-  version "18.2.0"
-  dependencies:
-    loose-envify "^1.1.0"
-    scheduler "^0.23.0"
+"react-dom@link:../node_modules/react-dom":
+  version "0.0.0"
+  uid ""
 
-"react@file:../node_modules/react":
-  version "18.2.0"
-  dependencies:
-    loose-envify "^1.1.0"
+"react@link:../node_modules/react":
+  version "0.0.0"
+  uid ""
 
 scheduler@^0.23.0:
   version "0.23.0"
@@ -237,8 +235,9 @@ tslib@^2.4.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
 
-"typescript@file:../node_modules/typescript":
-  version "4.9.4"
+"typescript@link:../node_modules/typescript":
+  version "0.0.0"
+  uid ""
 
 use-sync-external-store@1.2.0:
   version "1.2.0"
