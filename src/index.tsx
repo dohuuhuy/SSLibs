@@ -1,10 +1,3 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+// import 'bootstrap-icons/font/bootstrap-icons.css'
 
-interface Props {
-  text: string
-}
-
-export const Demo = ({ text }: Props) => {
-  return <div className={styles.test}>name: {text}</div>
-}
+export { default as Canlendar } from './components/Calendar'

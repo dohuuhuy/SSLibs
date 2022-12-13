@@ -7,7 +7,7 @@
       "esnext"
     ],
     "moduleResolution": "node",
-    "jsx": "react",
+    "jsx": "preserve",
     "sourceMap": true,
     "declaration": true,
     "esModuleInterop": true,
@@ -26,10 +26,13 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "incremental": true
   },
   "include": [
-    "src"
+    "src",
+    "pages/index.tsx",
+    "pages/_app.tsx"
   ],
   "exclude": [
     "build"
