@@ -24,7 +24,7 @@ const useSSCountDown = ({ timeInput }: SSCountDownProps) => {
     return () => {
       clearInterval(interval)
     }
-  }, [])
+  }, [timeInput])
 
   return { timeOutput: state, status }
 }

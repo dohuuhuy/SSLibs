@@ -1,5 +1,6 @@
 import { range } from 'lodash'
 import moment from 'moment'
+import 'moment/locale/vi'
 import { defineDays } from './contanst'
 import { Solar2Lunar } from './functionLunar'
 
@@ -55,6 +56,7 @@ export const calcDays = ({
   year,
   month
 }: CalcDays) => {
+
   const daysOld: any = range(weekDayOf).map((item) => {
     const iday = dayOfMonth.daysInMonth() - weekDayOf + item + 1
     return {

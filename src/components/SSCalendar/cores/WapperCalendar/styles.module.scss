@@ -3,4 +3,9 @@
   padding: 1rem;
   border-radius: 8px;
   margin: 2rem 1rem;
+  width: 600px;
+  background: white;
+  @media (max-width: 578px) {
+    width: fit-content;
+  }
 }

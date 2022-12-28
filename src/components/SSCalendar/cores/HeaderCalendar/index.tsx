@@ -1,8 +1,8 @@
 import cx from 'classnames'
 import { isEqual } from 'lodash'
 import moment from 'moment'
+import React from 'react'
 import styles from './styles.module.scss'
-import React from 'react';
 
 const HeaderCalendar: React.FC<HeaderProps> = ({
   date = moment(),
@@ -16,7 +16,7 @@ const HeaderCalendar: React.FC<HeaderProps> = ({
     {
       id: 'prev',
       onclick: handlePrev,
-      label: 'Lùi'
+      label: 'Trước'
     },
     {
       id: 'cur',
@@ -26,7 +26,7 @@ const HeaderCalendar: React.FC<HeaderProps> = ({
     {
       id: 'next',
       onclick: handleNext,
-      label: 'Tới'
+      label: 'Sau'
     }
   ]
 
@@ -61,7 +61,6 @@ const HeaderCalendar: React.FC<HeaderProps> = ({
 }
 
 export default HeaderCalendar
-
 
 export type KeyBtn = 'prev' | 'cur' | 'next'
 

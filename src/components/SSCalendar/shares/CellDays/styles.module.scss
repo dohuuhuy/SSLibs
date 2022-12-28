@@ -9,13 +9,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fff1df;
+  }
+
   p {
     margin-bottom: 0;
     font-size: 13px;
   }
 
   ~ &.today {
-    background-color: #fff1df;
+    background-color: #03a9f4a1;
+    .txtCell {
+      color: white;
+    }
   }
 
   // .faded {}
@@ -27,7 +36,8 @@
 
   .cellTxtWeek {
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
+    color: darksalmon;
   }
 
   .txtFaded {
