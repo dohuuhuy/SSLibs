@@ -1,38 +1,7 @@
-import React from 'react'
-import Days from './common/Days'
-import HeaderCalendar from './common/HeaderCalendar'
-import WeekDays from './common/WeekDays'
-import useDataCalendar from './HOCs/useDataCalendar'
-import styles from './styles.module.scss'
+import Days from './cores/Days'
+import HeaderCalendar from './cores/HeaderCalendar'
+import SSCalendarWapper from './cores/SSCalendarWapper'
+import WeekDays from './cores/WeekDays'
+import SSCalendarUI from './ui/SSCalendarUI'
 
-const SSCalendar = () => {
-  const {
-    date,
-    handleNext,
-    handlePrev,
-    handleReload,
-    dayss,
-    visible,
-    selectDayCell,
-    currentLunar
-  } = useDataCalendar()
-
-  const methodHeader = {
-    date,
-    handleNext,
-    handlePrev,
-    handleReload,
-    currentLunar
-  }
-  const methodDays = { dayss, visible, selectDayCell }
-
-  return (
-    <div className={styles.calendar}>
-      <HeaderCalendar {...methodHeader} />
-      <WeekDays />
-      <Days {...methodDays} />
-    </div>
-  )
-}
-
-export default SSCalendar
+export { SSCalendarUI, SSCalendarWapper, HeaderCalendar, WeekDays, Days }

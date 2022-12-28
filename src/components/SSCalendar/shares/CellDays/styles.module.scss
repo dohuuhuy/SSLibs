@@ -1,0 +1,44 @@
+.cell {
+  $size: 55px;
+  position: relative;
+  text-align: center;
+  border-radius: 0.5rem;
+  align-items: center;
+  min-height: $size;
+  min-width: $size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+
+  ~ &.today {
+    background-color: #fff1df;
+  }
+
+  // .faded {}
+
+  .txtCell {
+    text-align: center;
+    color: #6a6a6a;
+  }
+
+  .cellTxtWeek {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .txtFaded {
+    color: #9e9e9ec7;
+  }
+
+  .txtLunar {
+    font-size: 12px;
+    color: #dee2e6;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+}

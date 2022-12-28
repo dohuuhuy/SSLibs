@@ -4,7 +4,7 @@ import { defineDays } from '../process/contanst'
 import { calcDays, dataDate } from '../process/func'
 import { Solar2Lunar } from '../process/functionLunar'
 
-const useDataCalendar = () => {
+const useSSCalendar = () => {
   const [date, setDate] = useState(moment())
   const [visible, setVisible] = useState(false)
   const [state, setState] = useState({
@@ -43,7 +43,7 @@ const useDataCalendar = () => {
     return solar
   }
 
-  const dayss = useMemo(() => {
+  const listDay = useMemo(() => {
     return calcDays({ ...dataDate({ date }) })
   }, [date])
 
@@ -51,7 +51,7 @@ const useDataCalendar = () => {
     state,
     visible,
     date,
-    dayss,
+    listDay,
     handlePrev,
     handleNext,
     handleReload,
@@ -61,4 +61,4 @@ const useDataCalendar = () => {
   }
 }
 
-export default useDataCalendar
+export default useSSCalendar

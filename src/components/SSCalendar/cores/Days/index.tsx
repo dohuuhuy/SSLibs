@@ -1,18 +1,12 @@
-import React from 'react'
-import CellDays from '../../common/CellDays'
+import CellDays from '../../shares/CellDays'
 import styles from './styles.module.scss'
+import React from 'react'
 
-export interface Props {
-  dayss: never[]
-  visible: boolean
-  selectDayCell: ({ value }: any) => void
-}
-
-const Days = ({ dayss, selectDayCell }: Props) => {
+const Days: React.FC<DaysProps> = ({ data, selectDayCell }) => {
   return (
     <div className={styles.containerDays}>
-      <ul>
-        {dayss.map((v: any, i = 0) => {
+      <ul className={styles.listCell}>
+        {data.map((v: any, i = 0) => {
           return (
             <li key={i}>
               <CellDays
@@ -32,3 +26,8 @@ const Days = ({ dayss, selectDayCell }: Props) => {
 }
 
 export default Days
+
+export interface DaysProps {
+  data: any[]
+  selectDayCell?: ({ value }: any) => void
+}
