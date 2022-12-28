@@ -3,7 +3,9 @@ import { defineDays, weekDays } from '../../process/contanst'
 import CellDays from '../../shares/CellDays'
 import styles from './styles.module.scss'
 
-const WeekDays = ({ weekdays = weekDays }) => {
+const WeekDays: React.FC<{ weekdays?: string[] }> = ({
+  weekdays = weekDays
+}) => {
   return (
     <React.Fragment>
       <div className={styles.weekCell}>

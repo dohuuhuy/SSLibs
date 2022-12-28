@@ -1,11 +1,11 @@
 import Days from '../../cores/Days'
 import HeaderCalendar from '../../cores/HeaderCalendar'
-import SSCalendarWapper from '../../cores/SSCalendarWapper'
+import SSCalendarWapper from '../../cores/WapperCalendar'
 import WeekDays from '../../cores/WeekDays'
 import useSSCalendar from '../../hook'
 import React from 'react';
 
-const SSCalendarUI = () => {
+const SSCalendarUI:React.FC = () => {
   const {
     date,
     handleNext,
