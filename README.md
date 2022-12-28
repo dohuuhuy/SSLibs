@@ -1,30 +1,34 @@
-# calendar-lunar
+# SSlibs
 
-> lunar &amp; solar
+> Tiêu chí nhẹ và đẹp, có thể cài đặt lại theo yêu cầu ...
 
-[![NPM](https://img.shields.io/npm/v/calendar-lunar.svg)](https://www.npmjs.com/package/calendar-lunar) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
+## Install npm
 
 ```bash
-npm install --save calendar-lunar
+npm i sslibs
+```
+
+## Install yarn
+
+```bash
+yarn add sslibs
 ```
 
 ## Usage
 
 ```tsx
 import React, { Component } from 'react'
+import { SSCalendar, SSCountDownUI } from 'sslibs'
+import 'sslibs/dist/index.css'
 
-import MyComponentTest from 'calendar-lunar'
-import 'calendar-lunar/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponentTest />
-  }
+const TestLibs = () => {
+  return (
+    <>
+      <SSCountDownUI />
+      <SSCalendar />
+    </>
+  )
 }
+
+export default TestLibs
 ```
-
-## License
-
-MIT © [dohuuhuy](https://github.com/dohuuhuy)
