@@ -6,7 +6,7 @@ export interface SSCountDownProps {
     txtCls?: any
   }
   setting?: {
-    [K in keyTxt]: {
+    [K in keyTxt]?: {
       status: boolean
     }
   }
