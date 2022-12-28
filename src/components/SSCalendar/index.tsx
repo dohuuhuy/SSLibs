@@ -5,7 +5,7 @@ import WeekDays from './common/WeekDays'
 import useDataCalendar from './HOCs/useDataCalendar'
 import styles from './styles.module.scss'
 
-const Calendar = () => {
+const SSCalendar = () => {
   const {
     date,
     handleNext,
@@ -35,4 +35,4 @@ const Calendar = () => {
   )
 }
 
-export default Calendar
+export default SSCalendar

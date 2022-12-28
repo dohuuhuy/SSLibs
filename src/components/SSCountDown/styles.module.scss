@@ -1,0 +1,24 @@
+.wapper {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 8px;
+    min-width: 75px;
+    min-height: 75px;
+    
+    .num {
+      font-weight: 600;
+    }
+    .txt {
+      font-size: 0.875rem;
+    }
+  }
+}
