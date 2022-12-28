@@ -20,7 +20,7 @@
     "prepare": "run-s build",
     "predeploy": "cd example && yarn",
     "deploy": "gh-pages -d example/build",
-    "publish": "npm publish --access public"
+    "publish": "npm publish"
   },
   "peerDependencies": {
     "react": "^16.0.0"
