@@ -9,9 +9,10 @@ export interface SSCountDownProps {
     [K in keyTxt]?: {
       status: boolean
     }
+  } & {
+    shadow?: boolean
   }
   timeInput?: any
-  getValue?: boolean
 }
 
 export interface InitTime {
