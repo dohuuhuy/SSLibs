@@ -1,10 +1,13 @@
 {
-  "name": "SSLibs",
+  "name": "sslibs",
   "version": "1.2.1",
   "description": "libs for SS",
   "author": "dohuuhuy",
   "license": "MIT",
-  "repository": "dohuuhuy/SSLibs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dohuuhuy/SSLibs.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -61,5 +64,9 @@
   "dependencies": {
     "lodash": "4.17.21",
     "moment": "2.29.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dohuuhuy/SSLibs/issues"
+  },
+  "homepage": "https://github.com/dohuuhuy/SSLibs#readme"
 }
