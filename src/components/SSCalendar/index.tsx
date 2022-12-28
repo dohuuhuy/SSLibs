@@ -5,7 +5,7 @@ import WeekDays from './cores/WeekDays'
 import useSSCalendar from './hook'
 import SSCalendarUI from './ui/SSCalendarUI'
 
-export default {
+export {
   SSCalendarUI,
   SSCalendarWapper,
   HeaderCalendar,
