@@ -19,7 +19,12 @@
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "predeploy": "cd example && yarn",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "prettier": "prettier  --write **/*.{ts,tsx,js} {pages,src}/**/*.scss",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:es": "eslint -c .eslintrc.json",
+    "lint:ts": "tslint -c tslint.json -t stylish --fix {pages,src}/**/*.{ts,tsx}",
+    "lint:types": "tsc -p . --noEmit"
   },
   "peerDependencies": {
     "react": "^16.0.0"
