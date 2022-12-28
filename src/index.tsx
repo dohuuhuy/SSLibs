@@ -1,5 +1,5 @@
-import SSCalendar from './components/SSCalendar'
 import SSCountDownUI from './components/SSCountDown'
 import useSSCountDown from './components/SSCountDown/hook'
 
-export { SSCalendar, SSCountDownUI, useSSCountDown }
+export { default as SSCalendar } from './components/SSCalendar'
+export { SSCountDownUI, useSSCountDown }
