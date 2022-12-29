@@ -15,8 +15,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "microbundle-crl --format modern,cjs",
+    "start": "microbundle-crl watch --format modern,cjs",
     "prepare": "run-s build",
     "predeploy": "cd example && yarn",
     "deploy": "gh-pages -d example/build",
