@@ -1,10 +1,27 @@
 import cx from 'classnames'
 import React from 'react'
+import { LunarType, SelectDayArgs } from '../../interface'
 import { defineDays } from '../../process/contanst'
 import styles from './styles.module.scss'
 
-const CellDays = ({ value, index, type, isTodays, selectItem, lunar }: any) => {
-  const styleToday = isTodays ? styles.today : {}
+export type CellDaysProps = {
+  daysLunar?: LunarType
+  days?: number
+  type: string
+  isToday?: boolean
+  daysSolar?: {
+    day: number
+    year: any
+    month: any
+  }
+  onSelectDay?: ((args: SelectDayArgs) => void) | undefined
+  value: number
+}
+
+const CellDays = (props: CellDaysProps) => {
+  const { isToday, type, daysLunar, value } = props
+
+  const styleToday = isToday ? styles.today : {}
 
   const handleStyle = () => {
     switch (type) {
@@ -31,16 +48,16 @@ const CellDays = ({ value, index, type, isTodays, selectItem, lunar }: any) => {
     }
   }
 
-  const showMonth = lunar?.dd === 1 ? '/' + lunar?.mm : ''
+  const showMonth = daysLunar?.dd === 1 ? '/' + daysLunar?.mm : ''
 
   return (
     <div
       className={cx(handleStyle().cell, styleToday, styles.cell)}
-      onClick={() => selectItem?.({ value, index, type, isTodays })}
+      onClick={() => props.onSelectDay?.({ ...props })}
     >
       <p className={cx(handleStyle().txt)}>{value}</p>
       {type !== defineDays.CELL_WEEK && (
-        <p className={cx(styles.txtLunar)}>{lunar?.dd + showMonth}</p>
+        <p className={cx(styles.txtLunar)}>{daysLunar?.dd + showMonth}</p>
       )}
     </div>
   )

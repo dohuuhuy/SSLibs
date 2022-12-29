@@ -1,10 +1,11 @@
 import { range } from 'lodash'
-import moment from 'moment'
+import moment, { Moment } from 'moment'
 import 'moment/locale/vi'
+import { CalcDays, ItemDay } from '../interface'
 import { defineDays } from './contanst'
 import { Solar2Lunar } from './functionLunar'
 
-export type DataDate = { date: moment.Moment }
+export type DataDate = { date: Moment }
 
 export const dataDate = ({ date }: DataDate) => {
   const day = date.date()
@@ -38,15 +39,6 @@ export const dataDate = ({ date }: DataDate) => {
   }
 }
 
-export type CalcDays = {
-  year: any
-  month: any
-  daysInMonth: any
-  dayOfMonth: moment.Moment
-  weekDayOf: number
-  weekDayNew: number
-  dayNew: moment.Moment
-}
 export const calcDays = ({
   weekDayOf,
   dayOfMonth,
@@ -56,17 +48,17 @@ export const calcDays = ({
   year,
   month
 }: CalcDays) => {
-
-  const daysOld: any = range(weekDayOf).map((item) => {
+  const daysOld: ItemDay[] = range(weekDayOf).map((item) => {
     const iday = dayOfMonth.daysInMonth() - weekDayOf + item + 1
     return {
       daysLunar: Solar2Lunar(iday, month, year),
       days: iday,
-      type: defineDays.NO_DAYS_IN_MONTH
+      type: defineDays.NO_DAYS_IN_MONTH,
+      daysSolar: { day: iday, month, year }
     }
   })
 
-  const days: any = range(daysInMonth).map((item) => {
+  const days: ItemDay[] = range(daysInMonth).map((item) => {
     const isToday =
       formatDate({ day: item + 1, year, month }) ===
       moment().format(defineDays.DD_MM_YYYY)
@@ -74,20 +66,22 @@ export const calcDays = ({
       daysLunar: Solar2Lunar(item + 1, month + 1, year),
       days: item + 1,
       type: defineDays.DAYS_IN_MONTH,
-      isToday
+      isToday,
+      daysSolar: { day: item + 1, month, year }
     }
   })
 
-  const daysNew: any = range(6 - weekDayNew).map(() => {
+  const daysNew: ItemDay[] = range(6 - weekDayNew).map(() => {
     const iday = dayNew.add(1, 'day').date()
     return {
       daysLunar: Solar2Lunar(iday, month + 2, year),
       days: iday,
-      type: defineDays.NO_DAYS_IN_MONTH
+      type: defineDays.NO_DAYS_IN_MONTH,
+      daysSolar: { day: iday, month, year }
     }
   })
 
-  return [].concat(daysOld, days, daysNew)
+  return daysOld.concat(days, daysNew)
 }
 
 export type FormatDate = {

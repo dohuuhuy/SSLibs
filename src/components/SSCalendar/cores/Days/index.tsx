@@ -1,22 +1,29 @@
+import React from 'react'
+import { ItemDay, SelectDayArgs } from '../../interface'
 import CellDays from '../../shares/CellDays'
 import styles from './styles.module.scss'
-import React from 'react'
 
-const Days: React.FC<DaysProps> = ({ data, selectDayCell }) => {
+export interface DaysProps {
+  data: ItemDay[]
+  onSelectDay?: (args: SelectDayArgs) => void
+}
+
+const Days: React.FC<DaysProps> = ({ data, onSelectDay }) => {
   return (
     <div className={styles.containerDays}>
       <ul className={styles.listCell}>
-        {data.map((v: any, i = 0) => {
+        {data.map((v, i = 0) => {
+
+          console.log('v :>> ', v);
+          const passProps = {
+            onSelectDay,
+            value: v.days,
+            ...v
+          }
+
           return (
             <li key={i}>
-              <CellDays
-                selectDayCell={selectDayCell}
-                lunar={v.daysLunar}
-                value={v.days}
-                isTodays={v.isToday}
-                type={v.type}
-                {...v}
-              />
+              <CellDays {...passProps} />
             </li>
           )
         })}
@@ -26,8 +33,3 @@ const Days: React.FC<DaysProps> = ({ data, selectDayCell }) => {
 }
 
 export default Days
-
-export interface DaysProps {
-  data: any[]
-  selectDayCell?: ({ value }: any) => void
-}
