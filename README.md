@@ -1,6 +1,7 @@
 # SSlibs
 
 > Tiêu chí nhẹ và đẹp, có thể cài đặt lại theo yêu cầu ...
+> Hướng dẫn chi tiết tại: https://notebook.zohopublic.com/public/notes/01k0ec2ff2b31b68c4775ad0276bfa5323e40
 
 ## Install npm
 
@@ -32,3 +33,5 @@ const TestLibs = () => {
 
 export default TestLibs
 ```
+
+
