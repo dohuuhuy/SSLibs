@@ -67,7 +67,7 @@ export const calcDays = ({
       days: item + 1,
       type: defineDays.DAYS_IN_MONTH,
       isToday,
-      daysSolar: { day: item + 1, month, year }
+      daysSolar: { day: item + 1, month: month + 1, year }
     }
   })
 

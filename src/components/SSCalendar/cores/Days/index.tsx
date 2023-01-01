@@ -13,6 +13,7 @@ const Days: React.FC<DaysProps> = ({ data, onSelectDay }) => {
     <div className={styles.containerDays}>
       <ul className={styles.listCell}>
         {data.map((v, i = 0) => {
+
           const passProps = {
             onSelectDay,
             value: v.days,
