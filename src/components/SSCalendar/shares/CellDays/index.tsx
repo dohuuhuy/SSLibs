@@ -16,10 +16,11 @@ export type CellDaysProps = {
   }
   onSelectDay?: ((args: SelectDayArgs) => void) | undefined
   value: number
+  showLunar?: boolean
 }
 
 const CellDays = (props: CellDaysProps) => {
-  const { isToday, type, daysLunar, value } = props
+  const { isToday, type, daysLunar, value, showLunar } = props
 
   const styleToday = isToday ? styles.today : {}
 
@@ -48,7 +49,8 @@ const CellDays = (props: CellDaysProps) => {
     }
   }
 
-  const showMonth = daysLunar?.dd === 1 ? '/' + daysLunar?.mm : ''
+  const isFirstDayOfMonth = daysLunar?.dd === 1
+  const showMonth = isFirstDayOfMonth ? '/' + daysLunar?.mm : ''
 
   return (
     <div
@@ -56,8 +58,14 @@ const CellDays = (props: CellDaysProps) => {
       onClick={() => props.onSelectDay?.({ ...props })}
     >
       <p className={cx(handleStyle().txt)}>{value}</p>
-      {type !== defineDays.CELL_WEEK && (
-        <p className={cx(styles.txtLunar)}>{daysLunar?.dd + showMonth}</p>
+      {showLunar && type !== defineDays.CELL_WEEK && (
+        <p
+          className={cx(styles.txtLunar, {
+            [styles.firstDayOfMonth]: isFirstDayOfMonth
+          })}
+        >
+          {daysLunar?.dd + showMonth}
+        </p>
       )}
     </div>
   )
