@@ -22,6 +22,7 @@
 
   ~ &.today {
     background-color: #03a9f4a1;
+
     .txtCell {
       color: white;
     }
@@ -50,5 +51,9 @@
     position: absolute;
     bottom: 10%;
     right: 10%;
+    ~ &.firstDayOfMonth {
+      color: orangered;
+      font-weight: 600;
+    }
   }
 }
