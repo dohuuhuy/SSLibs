@@ -20,10 +20,9 @@
     "prepare": "run-s build",
     "predeploy": "cd example && yarn",
     "deploy": "gh-pages -d example/build",
-    "prettier": "prettier  --write **/*.{ts,tsx,js} {pages,src}/**/*.scss",
+    "prettier": "prettier --write **/*.{ts,tsx,js} {pages,src}/**/*.scss",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:es": "eslint -c .eslintrc.json",
-    "lint:ts": "tslint -c tslint.json -t stylish --fix {pages,src}/**/*.{ts,tsx}",
+    "lint:es": "eslint -c .eslintrc.json --fix {pages,src}/**/*.{ts,tsx}",
     "lint:types": "tsc -p . --noEmit"
   },
   "peerDependencies": {
