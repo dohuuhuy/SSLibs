@@ -1,4 +1,4 @@
-import * as SSCalendar from './components/SSCalendar'
-import * as SSCountDown from './components/SSCountDown'
-
-export { SSCountDown, SSCalendar }
+export * from './components/SSCalendar'
+export { default as SSCalendar } from './components/SSCalendar'
+export * from './components/SSCountDown'
+export { default as SSCountDown } from './components/SSCountDown'
