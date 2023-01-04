@@ -14,6 +14,7 @@ export {
   SSCalendarUI,
   useSSCalendar
 }
+export type { ICalendar }
 
 export default {
   Days,
@@ -21,6 +22,5 @@ export default {
   HeaderCalendar,
   WeekDays,
   SSCalendarUI,
-  useSSCalendar,
-  ...ICalendar
+  useSSCalendar
 }

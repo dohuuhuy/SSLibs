@@ -3,4 +3,5 @@ import * as ICountDown from './interface'
 import SSCountDownUI from './ui'
 
 export { SSCountDownUI, useSSCountDown }
-export default { SSCountDownUI, useSSCountDown, ...ICountDown }
+export type { ICountDown }
+export default { SSCountDownUI, useSSCountDown }
