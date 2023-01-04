@@ -1,7 +1,7 @@
 import moment from 'moment'
 import { useEffect, useState } from 'react'
 import { calcTime, initTime } from '../proccess/func'
-import { InitTime, SSCountDownProps } from '../proccess/interface'
+import { InitTime, SSCountDownProps } from '../interface'
 
 const useSSCountDown = ({ timeInput }: SSCountDownProps) => {
   const [state, setState] = useState<InitTime>(initTime)

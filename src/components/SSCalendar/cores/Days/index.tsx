@@ -1,26 +1,27 @@
 import React from 'react'
-import { ItemDay, SelectDayArgs } from '../../interface'
+import { DaysProps } from '../../interface'
 import CellDays from '../../shares/CellDays'
 import styles from './styles.module.scss'
 
-export interface DaysProps {
-  data: ItemDay[]
-  onSelectDay?: (args: SelectDayArgs) => void
-  showLunar?: boolean
-}
-
-const Days: React.FC<DaysProps> = ({ data, onSelectDay, showLunar = true }) => {
+const Days: React.FC<DaysProps> = ({
+  data,
+  onSelectDay,
+  showLunar = true,
+  chooseItem,
+  activeCls
+}) => {
   return (
     <div className={styles.containerDays}>
       <ul className={styles.listCell}>
         {data.map((v, i = 0) => {
-          
           const passProps = {
             onSelectDay,
             value: v.days,
             ...v,
-            showLunar
-          }
+            showLunar,
+            chooseItem,
+            activeCls
+          } as const
 
           return (
             <li key={i}>

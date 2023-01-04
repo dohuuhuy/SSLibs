@@ -1,5 +1,5 @@
 import moment from 'moment'
-import { InitTime, RenderTime } from './interface'
+import { InitTime, RenderTime } from '../interface'
 
 export const initTime = {
   days: '00',

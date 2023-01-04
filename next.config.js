@@ -12,9 +12,6 @@ const nextConfig = {
     domains: [
       'res.cloudinary.com',
       'co.sshop.live',
-      'lh3.googleusercontent.com',
-      'avatars.githubusercontent.com',
-      'graph.facebook.com'
     ],
     formats: ['image/avif', 'image/webp'],
     disableStaticImages: true,

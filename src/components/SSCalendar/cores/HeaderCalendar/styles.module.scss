@@ -2,7 +2,6 @@
   transition: all 0.3s;
 
   &:hover {
-    color: white;
     transform: translateY(-0.2rem);
   }
 
@@ -24,6 +23,9 @@
     font-weight: 500;
     margin-bottom: 0;
     color: darkturquoise;
+    @media (max-width: 568px) {
+      font-size: 14px;
+    }
   }
 
   .groupBtn {
@@ -37,6 +39,11 @@
     border-radius: 5px;
     background: transparent;
     padding: 10px 15px;
+
+    @media (max-width: 568px) {
+      padding: 5px 10px;
+      font-size: 11px;
+    }
     border: unset;
 
     @include trans();

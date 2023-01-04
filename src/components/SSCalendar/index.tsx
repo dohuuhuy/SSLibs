@@ -1,15 +1,19 @@
 import Days from './cores/Days'
 import HeaderCalendar from './cores/HeaderCalendar'
-import WapperCalendar from './cores/WapperCalendar'
 import WeekDays from './cores/WeekDays'
+import WrapperCalendar from './cores/WrapperCalendar'
 import useSSCalendar from './hook'
 import SSCalendarUI from './ui/SSCalendarUI'
 
+import * as Interface from './interface';
+
+
 export {
   Days,
-  WapperCalendar,
+  WrapperCalendar,
   HeaderCalendar,
   WeekDays,
   SSCalendarUI,
-  useSSCalendar
+  useSSCalendar,
+  Interface
 }

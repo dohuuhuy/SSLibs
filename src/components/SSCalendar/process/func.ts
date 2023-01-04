@@ -1,7 +1,7 @@
 import { range } from 'lodash'
 import moment, { Moment } from 'moment'
 import 'moment/locale/vi'
-import { CalcDays, ItemDay } from '../interface'
+import { CalcDays, ItemDay, ItemtBtn, ListBtn } from '../interface'
 import { defineDays } from './contanst'
 import { Solar2Lunar } from './functionLunar'
 
@@ -54,7 +54,13 @@ export const calcDays = ({
       daysLunar: Solar2Lunar(iday, month, year),
       days: iday,
       type: defineDays.NO_DAYS_IN_MONTH,
-      daysSolar: { day: iday, month, year }
+      daysSolar: {
+        day: iday,
+        month,
+        year,
+        ddmm: `${iday}/${month}`,
+        ddmmyyyy: `${iday}/${month}/${year}`
+      }
     }
   })
 
@@ -67,7 +73,13 @@ export const calcDays = ({
       days: item + 1,
       type: defineDays.DAYS_IN_MONTH,
       isToday,
-      daysSolar: { day: item + 1, month: month + 1, year }
+      daysSolar: {
+        day: item + 1,
+        month: month + 1,
+        year,
+        ddmm: `${item + 1}/${month + 1}`,
+        ddmmyyyy: `${item + 1}/${month + 1}/${year}`
+      } as const
     }
   })
 
@@ -77,7 +89,13 @@ export const calcDays = ({
       daysLunar: Solar2Lunar(iday, month + 2, year),
       days: iday,
       type: defineDays.NO_DAYS_IN_MONTH,
-      daysSolar: { day: iday, month, year }
+      daysSolar: {
+        day: iday,
+        month: month + 2,
+        year,
+        ddmm: `${iday}/${month + 2}`,
+        ddmmyyyy: `${iday}/${month + 2}/${year}`
+      }
     }
   })
 
@@ -97,3 +115,26 @@ export const formatDate = ({ day, year, month }: FormatDate) => {
 
   return timeCurr
 }
+
+export const renderListBtn = ({
+  handlePrev,
+  handleReload,
+  handleNext
+}: ListBtn) =>
+  [
+    {
+      id: 'prev',
+      onclick: handlePrev,
+      label: 'Trước'
+    },
+    {
+      id: 'cur',
+      onclick: handleReload,
+      label: 'Hiện tại'
+    },
+    {
+      id: 'next',
+      onclick: handleNext,
+      label: 'Sau'
+    }
+  ] as ItemtBtn[]

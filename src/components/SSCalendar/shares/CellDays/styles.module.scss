@@ -1,18 +1,26 @@
 .cell {
-  $size: 55px;
   position: relative;
   text-align: center;
   border-radius: 0.5rem;
   align-items: center;
-  min-height: $size;
-  min-width: $size;
   display: flex;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  height: 100%;
+
+  ~ &.active {
+    .txtCell {
+      color: white;
+    }
+    background-color: #03a9f4;
+    &:hover {
+      background-color: #03a9f4e8;
+    }
+  }
 
   &:hover {
-    background-color: #fff1df;
+    background-color: #03a9f4a1;
   }
 
   p {
@@ -21,18 +29,17 @@
   }
 
   ~ &.today {
-    background-color: #03a9f4a1;
+    background-color: #00ced1a3;
 
     .txtCell {
       color: white;
     }
   }
 
-  // .faded {}
-
   .txtCell {
     text-align: center;
     color: #6a6a6a;
+    margin-bottom: 0.8rem;
   }
 
   .cellTxtWeek {

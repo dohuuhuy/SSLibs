@@ -1,0 +1,16 @@
+@mixin listCell() {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+
+  li {
+    width: calc(100% / 7 - 0.1rem);
+    min-height: 45px;
+    text-align: center;
+  }
+}

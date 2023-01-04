@@ -1,6 +1,6 @@
 export interface SSCountDownProps {
   cls?: {
-    wapperCls?: any
+    wrapperCls?: any
     itemCls?: any
     numCls?: any
     txtCls?: any

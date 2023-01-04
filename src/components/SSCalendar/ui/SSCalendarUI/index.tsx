@@ -1,6 +1,6 @@
 import Days from '../../cores/Days'
 import HeaderCalendar from '../../cores/HeaderCalendar'
-import SSCalendarWapper from '../../cores/WapperCalendar'
+import SSCalendarWapper from '../../cores/WrapperCalendar'
 import WeekDays from '../../cores/WeekDays'
 import useSSCalendar from '../../hook'
 import React from 'react'

@@ -1,19 +1,10 @@
+@import './../../styles/mixin';
+
 .containerDays {
   flex-wrap: 'wrap';
   flex-direction: 'column';
 
   .listCell {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-
-    li {
-      width: calc(100% / 7);
-      text-align: center;
-    }
+    @include listCell();
   }
 }
