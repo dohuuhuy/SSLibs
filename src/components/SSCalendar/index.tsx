@@ -3,9 +3,8 @@ import HeaderCalendar from './cores/HeaderCalendar'
 import WeekDays from './cores/WeekDays'
 import WrapperCalendar from './cores/WrapperCalendar'
 import useSSCalendar from './hook'
+import * as ICalendar from './interface'
 import SSCalendarUI from './ui/SSCalendarUI'
-import * as ICalendar from './interface';
-
 
 export {
   Days,
@@ -13,8 +12,7 @@ export {
   HeaderCalendar,
   WeekDays,
   SSCalendarUI,
-  useSSCalendar,
-  ICalendar
+  useSSCalendar
 }
 
 export default {
@@ -24,5 +22,5 @@ export default {
   WeekDays,
   SSCalendarUI,
   useSSCalendar,
-  ICalendar
+  ...ICalendar
 }
