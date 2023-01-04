@@ -14,8 +14,8 @@ export type DaySolarType = {
   day: number
   month: number
   year: number
-  ddmm?: `${number}/${number}`
-  ddmmyyyy?: `${number}/${number}/${number}`
+  ddmm?:string
+  ddmmyyyy?: string
 }
 
 export type ItemDay = {
