@@ -1,6 +1,6 @@
 import Days from '../../cores/Days'
 import HeaderCalendar from '../../cores/HeaderCalendar'
-import SSCalendarWapper from '../../cores/WrapperCalendar'
+import SSCalendarWrapper from '../../cores/WrapperCalendar'
 import WeekDays from '../../cores/WeekDays'
 import useSSCalendar from '../../hook'
 import React from 'react'
@@ -20,11 +20,11 @@ const SSCalendarUI: React.FC = () => {
   const methodDays = { data: listDay }
 
   return (
-    <SSCalendarWapper>
+    <SSCalendarWrapper>
       <HeaderCalendar {...methodHeader} />
       <WeekDays />
       <Days {...methodDays} />
-    </SSCalendarWapper>
+    </SSCalendarWrapper>
   )
 }
 
