@@ -1,6 +1,6 @@
 import * as ISSIcon from './interface'
-import SSIcon from './ui'
+import SvgIcon from './ui'
 
-export { SSIcon }
+export { SvgIcon }
 export type { ISSIcon }
-export default { SSIcon }
+export default { SvgIcon }
