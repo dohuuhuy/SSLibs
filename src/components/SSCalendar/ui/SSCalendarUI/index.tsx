@@ -1,31 +1,31 @@
-import Days from '../../cores/Days'
-import HeaderCalendar from '../../cores/HeaderCalendar'
-import SSCalendarWrapper from '../../cores/WrapperCalendar'
-import WeekDays from '../../cores/WeekDays'
-import useSSCalendar from '../../hook'
-import React from 'react'
+import Days from '../../cores/Days';
+import HeaderCalendar from '../../cores/HeaderCalendar';
+import SSCalendarWapper from '../../cores/WrapperCalendar';
+import WeekDays from '../../cores/WeekDays';
+import useSSCalendar from '../../hook';
+import React from 'react';
 
 const SSCalendarUI: React.FC = () => {
   const { date, handleNext, handlePrev, handleReload, listDay, currentLunar } =
-    useSSCalendar()
+    useSSCalendar();
 
   const methodHeader = {
     date,
     handleNext,
     handlePrev,
     handleReload,
-    currentLunar
-  }
+    currentLunar,
+  };
 
-  const methodDays = { data: listDay }
+  const methodDays = { data: listDay };
 
   return (
-    <SSCalendarWrapper>
+    <SSCalendarWapper>
       <HeaderCalendar {...methodHeader} />
       <WeekDays />
       <Days {...methodDays} />
-    </SSCalendarWrapper>
-  )
-}
+    </SSCalendarWapper>
+  );
+};
 
-export default SSCalendarUI
+export default SSCalendarUI;

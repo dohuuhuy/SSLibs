@@ -1,31 +1,31 @@
 export interface SSCountDownProps {
   cls?: {
-    wrapperCls?: any
-    itemCls?: any
-    numCls?: any
-    txtCls?: any
-  }
+    wrapperCls?: any;
+    itemCls?: any;
+    numCls?: any;
+    txtCls?: any;
+  };
   setting?: {
     [K in keyTxt]?: {
-      status: boolean
-    }
+      status: boolean;
+    };
   } & {
-    shadow?: boolean
-  }
-  timeInput?: any
+    shadow?: boolean;
+  };
+  timeInput?: any;
 }
 
 export interface InitTime {
-  days: number | string
-  hours: number | string
-  minutes: number | string
-  seconds: number | string
+  days: number | string;
+  hours: number | string;
+  minutes: number | string;
+  seconds: number | string;
 }
 
-export type keyTxt = 'days' | 'hours' | 'minutes' | 'seconds'
+export type keyTxt = 'days' | 'hours' | 'minutes' | 'seconds';
 
 export type RenderTime = {
-  key: keyTxt
-  num: string | number
-  txt: string
-}
+  key: keyTxt;
+  num: string | number;
+  txt: string;
+};
