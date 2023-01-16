@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <IconSvg name='pen_edit' size={25} fill='red' />
 
-        <IconImg name='chat' size={500}/>
+        <IconImg name='chat' size={50}/>
       </div>
     </>
   )
