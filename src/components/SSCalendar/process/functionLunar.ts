@@ -268,6 +268,6 @@ export const Lunar2Solar = (D = 0, M = 0, Y = 0, leap = 0) => {
     const jd = LocalToJD(lunarMonth[0], lunarMonth[1], lunarMonth[2]);
     return LocalFromJD(jd + D - 1);
   } else {
-    return;
+    return null;
   }
 };

@@ -1,7 +1,7 @@
-import cx from 'classnames'
-import React from 'react'
-import { ImgProps, IWrapperIconImg } from '../../interface'
-import styles from './styles.module.scss'
+import cx from 'classnames';
+import React from 'react';
+import { ImgProps, IWrapperIconImg } from '../../interface';
+import styles from './styles.module.scss';
 
 const Img = ({
   width,
@@ -10,24 +10,24 @@ const Img = ({
   className,
   list,
   name,
-  styleFigure
+  styleFigure,
 }: IWrapperIconImg & ImgProps) => {
-  const imgUrl = list[name]
+  const imgUrl = list[name];
 
   const prototypeFigure: any = {
     style: Object.assign(
       {
         minHeight: height || width || size,
-        width: width || size
+        width: width || size,
       },
-      styleFigure
+      styleFigure,
     ),
-    className: cx(styles.wrapper, className)
-  }
+    className: cx(styles.wrapper, className),
+  };
 
   const prototypeImg: any = {
-    src: imgUrl
-  }
+    src: imgUrl,
+  };
 
   return (
     <React.Fragment>
@@ -35,7 +35,7 @@ const Img = ({
         <img {...prototypeImg} />
       </figure>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Img
+export default Img;

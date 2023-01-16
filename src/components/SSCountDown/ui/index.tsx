@@ -25,8 +25,12 @@ const SSCountDownUI: React.FC<SSCountDownProps> = ({
               })}
               key={index}
             >
-              <span className={cx(styles.num, cls?.numCls)}>{element?.num}</span>
-              <span className={cx(styles.txt, cls?.txtCls)}>{element?.txt}</span>
+              <span className={cx(styles.num, cls?.numCls)}>
+                {element?.num}
+              </span>
+              <span className={cx(styles.txt, cls?.txtCls)}>
+                {element?.txt}
+              </span>
             </div>
           )
         );

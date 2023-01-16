@@ -1,8 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -19,6 +17,9 @@
         "allowTernary": true
       }
     ],
+    "semi": 0,
+    "quotes": 0,
+    "no-empty-pattern": "off",
     "react/react-in-jsx-scope": 0,
     "react/display-name": 0,
     "react/prop-types": 0,
@@ -41,11 +42,7 @@
     "no-console": [
       2,
       {
-        "allow": [
-          "warn",
-          "error",
-          "info"
-        ]
+        "allow": ["warn", "error", "info"]
       }
     ]
   }

@@ -1,7 +1,6 @@
-
 export default function index() {
   return (
-    <svg viewBox="0 0 36 36" >
+    <svg viewBox="0 0 36 36">
       <path
         fill="#EEE"
         d="M32 5H4a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"
