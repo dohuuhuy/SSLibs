@@ -1,0 +1,44 @@
+@import url('https://fonts.cdnfonts.com/css/svn-gilroy');
+
+body {
+  background: #f8f8f9;
+  color: #586983;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  scroll-behavior: smooth;
+
+  a {
+    text-decoration: none;
+    color: #3d4c63;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  figure {
+    margin-bottom: 0;
+  }
+
+  input[type='number'] {
+    --moz-appearance: textfield;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+    display: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
