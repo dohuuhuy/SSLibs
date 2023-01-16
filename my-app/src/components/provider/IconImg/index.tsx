@@ -1,16 +1,14 @@
-import React from 'react';
-import { ISSIcon, SSIcon } from 'sslibs';
-import { NameIcon } from './interface';
+import { ISSIcon, SSIcon } from 'sslibs'
 
-const IconImg = ({ name, ...args }: ISSIcon.ImgProps & { name: NameIcon }) => {
-  try {
-    return (
-      <SSIcon.SvgIcon {...args} Detail={require(`./lib/${name}`).default} />
-    );
-  } catch (error) {
-    console.info('error CSIcon', error);
-    return <React.Fragment />;
-  }
-};
+const IconImg = ({ ...args }: ISSIcon.ImgProps & { name: NameIcon }) => {
+  return <SSIcon.ImgIcon {...args} list={listImage} />
+}
 
-export default IconImg;
+export default IconImg
+
+const listImage = {
+  chat: 'https://co.sshop.live/client/assets/images/personal/service/chat.png?t=1673874539752',
+  lich: 'https://co.sshop.live/client/assets/images/personal/service/lich.png?t=1673874539752'
+}
+
+type NameIcon = keyof typeof listImage

@@ -1,8 +1,8 @@
 import React from 'react'
 import Img from '../blocks/Img'
-import { IconProps, IWrapperIcon } from '../interface'
+import { ImgProps, IWrapperIconImg } from '../interface'
 
-const ImgIcon = ({ Detail, ...args }: IWrapperIcon & IconProps) => {
+const ImgIcon = ({ ...args }:IWrapperIconImg & ImgProps) => {
   return (
     <React.Fragment>
       <Img {...args} />

@@ -1,8 +1,8 @@
 import React from 'react'
-import { IconProps, IWrapperIcon } from '../interface'
 import Svg from '../blocks/Svg'
+import { IconProps, IWrapperIconSvg } from '../interface'
 
-const SvgIcon = ({ Detail, ...args }: IWrapperIcon & IconProps) => {
+const SvgIcon = ({ Detail, ...args }: IWrapperIconSvg & IconProps) => {
   return (
     <React.Fragment>
       <Svg {...args}>{Detail && <Detail {...args} />}</Svg>
