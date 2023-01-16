@@ -1,15 +1,22 @@
 export type IWrapperIcon = {
-  Detail: any;
-};
+  Detail: any
+}
 
 export type IconProps = {
-  width?: number;
-  height?: number;
-  children?: React.ReactNode;
+  width?: number
+  height?: number
+  children?: React.ReactNode
 
-  fill?: any;
-  stroke?: any;
+  fill?: any
+  stroke?: any
 
-  size?: number;
-  className?: any;
-};
+  size?: number
+  className?: any
+}
+
+export type ImgProps = {
+  width?: number
+  height?: number
+  size?: number
+  className?: any
+}

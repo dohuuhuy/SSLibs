@@ -1,6 +1,6 @@
 import React from 'react'
 import { IconProps, IWrapperIcon } from '../interface'
-import Svg from '../Svg'
+import Svg from '../blocks/Svg'
 
 const SvgIcon = ({ Detail, ...args }: IWrapperIcon & IconProps) => {
   return (

@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import React from 'react'
-import { IconProps } from '../interface'
+import { IconProps } from '../../interface'
 import styles from './styles.module.scss'
 
 const Svg = ({

@@ -1,5 +1,5 @@
 import * as ISSIcon from './interface'
-import SvgIcon from './ui'
+import SvgIcon from './ui/SvgIcon'
 
 export { SvgIcon }
 export type { ISSIcon }
