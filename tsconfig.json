@@ -18,5 +18,5 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src"],
-  "exclude": ["node_modules", "dist", "my-app"]
+  "exclude": ["node_modules", "dist"]
 }
