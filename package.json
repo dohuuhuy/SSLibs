@@ -18,7 +18,6 @@
     "build": "microbundle-crl --format modern,cjs",
     "start": "microbundle-crl watch --format modern,cjs",
     "prepare": "run-s build",
-    "start:my-app": "cd my-app && yarn dev",
     "predeploy": "cd my-app && yarn",
     "deploy": "gh-pages -d my-app/build",
     "prettier": "prettier --write **/*.{ts,tsx,js} {pages,src}/**/*.scss",
