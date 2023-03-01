@@ -52,6 +52,7 @@ const useSSCalendar = () => {
     visible,
     date,
     listDay,
+    current: dataDate({ date: moment() }),
     handlePrev,
     handleNext,
     handleReload,
