@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { defineDays } from '../process/contanst';
 import { calcDays, dataDate } from '../process/func';
 import { Solar2Lunar } from '../process/functionLunar';
@@ -43,16 +43,12 @@ const useSSCalendar = () => {
     return solar;
   };
 
-  const listDay = useMemo(() => {
-    return calcDays({ ...dataDate({ date }) });
-  }, [date]);
-
   return {
     state,
     visible,
     date,
-    listDay,
-    current: dataDate({ date: moment() }),
+    listDay: calcDays({ ...dataDate({ date }) }),
+    current: dataDate({ date }),
     handlePrev,
     handleNext,
     handleReload,
