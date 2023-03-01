@@ -24,6 +24,7 @@ export type ItemDay = {
   type: string;
   isToday?: boolean;
   daysSolar?: DaySolarType;
+  weekday?: string;
 };
 
 export interface LunarType {
