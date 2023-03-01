@@ -2,7 +2,7 @@ import { range } from 'lodash';
 import moment, { Moment } from 'moment';
 import 'moment/locale/vi';
 import { CalcDays, ItemDay, ItemtBtn, ListBtn } from '../interface';
-import { defineDays } from './contanst';
+import { defineDays, weeks } from './contanst';
 import { Solar2Lunar } from './functionLunar';
 
 export type DataDate = { date: Moment };
@@ -61,6 +61,7 @@ export const calcDays = ({
         ddmm: `${iday}/${month}`,
         ddmmyyyy: `${iday}/${month}/${year}`,
       },
+      weekday: getWeek(`${iday}/${month}/${year}`),
     };
   });
 
@@ -80,8 +81,14 @@ export const calcDays = ({
         ddmm: `${item + 1}/${month + 1}`,
         ddmmyyyy: `${item + 1}/${month + 1}/${year}`,
       } as const,
+
+      weekday: getWeek(`${item + 1}/${month + 1}/${year}`),
     };
   });
+
+  const getWeek = (date: any) => {
+    return weeks[moment(date, defineDays.DDMMYYYY).day()];
+  };
 
   const daysNew: ItemDay[] = range(6 - weekDayNew).map(() => {
     const iday = dayNew.add(1, 'day').date();
@@ -96,6 +103,7 @@ export const calcDays = ({
         ddmm: `${iday}/${month + 2}`,
         ddmmyyyy: `${iday}/${month + 2}/${year}`,
       },
+      weekday: getWeek(`${iday}/${month + 2}/${year}`),
     };
   });
 
