@@ -39,6 +39,10 @@ export const dataDate = ({ date }: DataDate) => {
   };
 };
 
+const getWeek = (date: any) => {
+  return date ? weeks[moment(date, defineDays.DDMMYYYY).day()] : '';
+};
+
 export const calcDays = ({
   weekDayOf,
   dayOfMonth,
@@ -85,10 +89,6 @@ export const calcDays = ({
       weekday: getWeek(`${item + 1}/${month + 1}/${year}`),
     };
   });
-
-  const getWeek = (date: any) => {
-    return weeks[moment(date, defineDays.DDMMYYYY).day()];
-  };
 
   const daysNew: ItemDay[] = range(6 - weekDayNew).map(() => {
     const iday = dayNew.add(1, 'day').date();
