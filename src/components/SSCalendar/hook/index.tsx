@@ -1,14 +1,14 @@
-import moment from 'moment';
-import { useState } from 'react';
-import { defineDays } from '../process/contanst';
-import { calcDays, dataDate } from '../process/func';
-import { Solar2Lunar } from '../process/functionLunar';
+import moment from "moment";
+import { useState } from "react";
+import { defineDays } from "../process/contanst";
+import { calcDays, dataDate } from "../process/func";
+import { Solar2Lunar } from "../process/functionLunar";
 
 const useSSCalendar = () => {
   const [date, setDate] = useState(moment());
   const [visible, setVisible] = useState(false);
-  const [state, setState] = useState({
-    selectedDay: '',
+  const [select, setSelect] = useState({
+    selectedDay: "",
   });
 
   const handleReload = () => {
@@ -16,11 +16,11 @@ const useSSCalendar = () => {
   };
 
   const handlePrev = () => {
-    setDate((element: any) => moment(element).subtract(1, 'month'));
+    setDate((element: any) => moment(element).subtract(1, "month"));
   };
 
   const handleNext = () => {
-    setDate((element: any) => moment(element).add(1, 'month'));
+    setDate((element: any) => moment(element).add(1, "month"));
   };
   const toggleOverlay = () => {
     setVisible(!visible);
@@ -30,9 +30,9 @@ const useSSCalendar = () => {
     const { year, month } = dataDate({ date });
     const dayNew = moment(
       `${year}-${month + 1}-${value}`,
-      defineDays.YYYY_MM_DD,
+      defineDays.YYYY_MM_DD
     ).format(defineDays.DD_MM_YYYY);
-    setState({ selectedDay: dayNew });
+    setSelect({ selectedDay: dayNew });
     toggleOverlay();
   };
 
@@ -44,9 +44,11 @@ const useSSCalendar = () => {
   };
 
   return {
-    state,
+    select,
+    setSelect,
     visible,
     date,
+    setDate,
     listDay: calcDays({ ...dataDate({ date }) }),
     current: dataDate({ date }),
     handlePrev,
